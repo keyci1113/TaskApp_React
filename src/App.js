@@ -2,10 +2,14 @@ import logo from './platzi.webp';
 import './App.css';
 
 function App() {
-  return (
+  return ( // JSX
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        
         <p>
           Edita el archivo <code>src/App.js</code> y guarda para recargar.
         </p>
@@ -15,11 +19,20 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Aprender React
         </a>
       </header>
     </div>
   );
 }
 
+function TodoItem() {
+  return(
+    <li>
+      <span>Tristear con los tres tristes tigres</span>
+      <button>Completar</button>
+      <button>Eliminar</button>
+      </li>
+  )
+}
 export default App;
